@@ -1,1 +1,14 @@
-
+   - name: Deploy Static Webapp to AWS
+  # You may pin to the exact commit or the version.
+  # uses: techmmunity/action-deploy-static-webapp-aws@0d2329ea87261b54c2993c481de5886254f3e88a
+  uses: techmmunity/action-deploy-static-webapp-aws@1.0.0
+  with:
+    # The build path to deploy to s3
+    build_path: 
+    # The AWS S3 bucket you will like to deploy to
+    bucket_name: 
+    # The path of the folder you will to deploy to within the S3 bucket
+    bucket_key: # optional
+    # The path in cloudfront to invalidate
+    distribution_invalidation_path: # optional, default is /*
+          
