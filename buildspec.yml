@@ -2,12 +2,16 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      python: 3.9   # Specify your desired Python version
     commands:
       - echo Installing dependencies...
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
   build:
     commands:
       - echo Build started on `date`
-      - echo Compiling the application...
+      - python your_script.py   # Replace with your main script or test command
   post_build:
     commands:
       - echo Build completed on `date`
